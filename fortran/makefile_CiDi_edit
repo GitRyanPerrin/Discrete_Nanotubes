@@ -1,0 +1,14 @@
+MKLPATH=/home/ryan/intel/mkl/lib/intel64/
+MKLINCLUDE=/home/ryan/intel/mkl/include/intel64/lp64
+
+CiDi: CiDi_v05.f90
+	ifort CiDi_v05.f90 -O3 -o cidi.out -L$(MKLPATH) -I$(MKLINCLUDE) \
+\
+-Wl,--start-group \
+$(MKLPATH)/libmkl_intel_lp64.a \
+$(MKLPATH)/libmkl_intel_thread.a \
+$(MKLPATH)/libmkl_lapack95_lp64.a \
+$(MKLPATH)/libmkl_core.a \
+-Wl,--end-group \
+\
+-liomp5 
