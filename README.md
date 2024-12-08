@@ -1,0 +1,1 @@
+This repository is from the early days of my research into charge transport in nanowire systems. The code has some applicability to both quantum rings and core/shell nanowires, and what is considered here is primarily the conduction band structure.
